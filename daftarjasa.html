@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Jasa - Jasa Desain Grafis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Jasa Desain Grafis</h1>
+    <nav aria-label="Menu utama">
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="pengertian.html">Pengertian</a></li>
+        <li><a href="layanan.html">Jenis Layanan</a></li>
+        <li><a href="daftarjasa.html">Daftar Jasa</a></li>
+        <li><a href="alur.html">Alur Kerja</a></li>
+        <li><a href="biodata.html">Biodata Kelompok</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>Daftar Jasa Desain Grafis</h2>
+      <p>Berikut daftar jasa yang ditawarkan beserta kisaran harga dan estimasi pengerjaannya. Data disimpan dalam sebuah array JavaScript, lalu ditampilkan ke tabel menggunakan perulangan.</p>
+
+      <table>
+        <caption>Daftar jasa dan harga (contoh)</caption>
+        <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Nama Jasa</th>
+            <th scope="col">Kategori</th>
+            <th scope="col">Harga Mulai</th>
+            <th scope="col">Estimasi</th>
+          </tr>
+        </thead>
+        <tbody id="isiTabel"></tbody>
+      </table>
+
+      <p id="totalJasa" class="catatan"></p>
+    </article>
+  </main>
+
+  <script>
+    // Array berisi objek jasa (harga dan estimasi hanya contoh)
+    var daftarJasa = [
+      { nama: "Desain Logo",            kategori: "Identitas Merek", harga: 150000, estimasi: "3 hari" },
+      { nama: "Kartu Nama",             kategori: "Media Cetak",     harga: 50000,  estimasi: "1 hari" },
+      { nama: "Poster Acara",           kategori: "Media Cetak",     harga: 75000,  estimasi: "2 hari" },
+      { nama: "Brosur / Flyer",         kategori: "Media Cetak",     harga: 100000, estimasi: "2 hari" },
+      { nama: "Desain Kemasan Produk",  kategori: "Kemasan",         harga: 250000, estimasi: "5 hari" },
+      { nama: "Konten Media Sosial",    kategori: "Digital",         harga: 60000,  estimasi: "1 hari" },
+      { nama: "Banner Situs Web",       kategori: "Digital",         harga: 90000,  estimasi: "2 hari" },
+      { nama: "Infografis",             kategori: "Digital",         harga: 175000, estimasi: "3 hari" },
+      { nama: "Desain Merchandise",     kategori: "Tambahan",        harga: 120000, estimasi: "3 hari" }
+    ];
+
+    // Mengubah angka menjadi format rupiah, misal 150000 -> Rp 150.000
+    function formatRupiah(angka) {
+      return "Rp " + angka.toLocaleString("id-ID");
+    }
+
+    // Menampilkan seluruh isi array ke tabel
+    function tampilkanDaftar() {
+      var tbody = document.getElementById("isiTabel");
+      var baris = "";
+
+      for (var i = 0; i < daftarJasa.length; i++) {
+        var j = daftarJasa[i];
+        baris += "<tr>" +
+                   "<td>" + (i + 1) + "</td>" +
+                   "<td>" + j.nama + "</td>" +
+                   "<td>" + j.kategori + "</td>" +
+                   "<td class=\"harga\">" + formatRupiah(j.harga) + "</td>" +
+                   "<td>" + j.estimasi + "</td>" +
+                 "</tr>";
+      }
+
+      tbody.innerHTML = baris;
+      document.getElementById("totalJasa").textContent =
+        "Total: " + daftarJasa.length + " jenis jasa tersedia.";
+    }
+
+    // Jalankan saat halaman dimuat
+    tampilkanDaftar();
+  </script>
+
+  <footer>
+    <p>&copy; 2026 Kelompok Pemrograman Web - Universitas Islam Balitar</p>
+  </footer>
+</body>
+</html>

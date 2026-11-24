@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Jasa Desain Grafis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="halaman-login">
+  <div class="overlay">
+    <div class="popup" role="dialog" aria-modal="true" aria-labelledby="judulLogin">
+      <h1 id="judulLogin">Login</h1>
+      <p class="catatan">Masuk untuk membuka situs Jasa Desain Grafis.</p>
+
+      <form id="formLogin" onsubmit="return prosesLogin(event)">
+        <div class="field">
+          <label for="username">Nama Pengguna</label>
+          <input type="text" id="username" name="username" autocomplete="username" autofocus>
+        </div>
+        <div class="field">
+          <label for="password">Kata Sandi</label>
+          <input type="password" id="password" name="password" autocomplete="current-password">
+        </div>
+        <button type="submit">Masuk</button>
+        <div id="pesan" class="pesan" role="alert" hidden></div>
+      </form>
+
+      <p class="catatan">Akun contoh: nama pengguna <strong>admin</strong>, kata sandi <strong>12345</strong>.</p>
+    </div>
+  </div>
+
+  <script>
+    // Data akun untuk login
+    var USER_BENAR = "admin";
+    var PASS_BENAR = "12345";
+
+    function tampilkanPesan(teks, jenis) {
+      var kotak = document.getElementById("pesan");
+      kotak.textContent = teks;
+      kotak.className = "pesan " + jenis;
+      kotak.hidden = false;
+    }
+
+    function formValid(user, pass) {
+      if (user === "" || pass === "") {
+        tampilkanPesan("Nama pengguna dan kata sandi wajib diisi.", "error");
+        return false;
+      }
+      return true;
+    }
+
+    function prosesLogin(event) {
+      event.preventDefault();
+
+      var user = document.getElementById("username").value.trim();
+      var pass = document.getElementById("password").value;
+
+      if (!formValid(user, pass)) {
+        return false;
+      }
+
+      if (user === USER_BENAR && pass === PASS_BENAR) {
+        tampilkanPesan("Login berhasil! Selamat datang, " + user + ". Membuka situs...", "sukses");
+        setTimeout(function () {
+          window.location.href = "index.html";
+        }, 1200);
+      } else {
+        tampilkanPesan("Nama pengguna atau kata sandi salah.", "error");
+      }
+      return false;
+    }
+  </script>
+</body>
+</html>
