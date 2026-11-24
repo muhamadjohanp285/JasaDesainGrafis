@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" width="400" height="560" role="img" aria-label="Contoh poster Workshop Desain Grafis">
+<rect width="400" height="560" fill="#1b1340"/>
+<circle cx="330" cy="90" r="120" fill="#ff5d8f"/>
+<circle cx="60" cy="470" r="140" fill="#ffd166"/>
+<rect x="150" y="150" width="120" height="120" fill="#06d6a0" transform="rotate(18 210 210)"/>
+<polygon points="90,240 170,360 10,360" fill="#4cc9f0"/>
+<text x="30" y="70" font-family="Arial,sans-serif" font-size="18" letter-spacing="5" fill="#fff">SABTU, 15 NOVEMBER</text>
+<text x="30" y="420" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="bold" fill="#fff">WORKSHOP</text>
+<text x="30" y="475" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="bold" fill="#ffd166">DESAIN</text>
+<text x="30" y="530" font-family="Arial Black,Arial,sans-serif" font-size="52" font-weight="bold" fill="#fff">GRAFIS</text>
+</svg>

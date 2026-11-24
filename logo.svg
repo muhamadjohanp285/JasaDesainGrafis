@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img" aria-label="Contoh logo Kopi Senja">
+<rect width="600" height="400" fill="#fff7ec"/>
+<circle cx="300" cy="150" r="95" fill="#5b2a86"/>
+<circle cx="300" cy="150" r="80" fill="none" stroke="#ffd166" stroke-width="4"/>
+<path d="M255 135h90v30a45 40 0 0 1-90 0z" fill="#fff7ec"/>
+<path d="M345 142h14a16 16 0 0 1 0 32h-18" fill="none" stroke="#fff7ec" stroke-width="7"/>
+<path d="M280 118q8-16 0-28M305 118q8-16 0-28M330 118q8-16 0-28" fill="none" stroke="#ffd166" stroke-width="5" stroke-linecap="round"/>
+<text x="300" y="300" text-anchor="middle" font-family="Georgia,serif" font-size="56" font-weight="bold" fill="#5b2a86">Kopi Senja</text>
+<text x="300" y="338" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" letter-spacing="6" fill="#a65e2e">SEDUH DENGAN CERITA</text>
+</svg>
